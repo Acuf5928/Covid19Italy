@@ -8,9 +8,12 @@ import android.widget.Spinner
 import android.widget.TextView
 import org.json.JSONObject
 
+const val linkNation = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
+const val linkRegion = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json"
+
 class MainActivity : AppCompatActivity() {
     private var index = 0
-    private var url = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
+    private var url = linkNation
 
     private lateinit var dataText: TextView
     private lateinit var sintomiText: TextView
@@ -52,11 +55,11 @@ class MainActivity : AppCompatActivity() {
                 when (position) {
                     0 -> {
                         index = 0
-                        url = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
+                        url = linkNation
                     }
                     else -> {
                         index = position - 1
-                        url = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json"
+                        url = linkRegion
                     }
                 }
                 updateView()
