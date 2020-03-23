@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onError(e: Exception) {
                 runOnUiThread {
-                    findViewById<TextView>(R.id.data).text = "NON CONNESSO"
+                    findViewById<TextView>(R.id.data).text = getString(R.string.not_connected)
                 }
             }
         })

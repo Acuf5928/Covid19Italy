@@ -12,6 +12,7 @@
     <string name="deceduti">Deceduti</string>
     <string name="totale_casi">Totale casi</string>
     <string name="tamponi">Tamponi</string>
+    <string name="not_connected">NON CONNESSO</string>
     <string-array name="regioni">
         <item>Italia</item>
         <item>Abruzzo</item>
