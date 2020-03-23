@@ -1,19 +1,19 @@
 package com.acuf5928.codingavirus
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
 
-const val linkNation = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
-const val linkRegion = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json"
+const val LINK_NATION = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
+const val LINK_REGION = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json"
 
 class MainActivity : AppCompatActivity() {
     private var index = 0
-    private var url = linkNation
+    private var url = LINK_NATION
 
     private lateinit var dataText: TextView
     private lateinit var sintomiText: TextView
@@ -52,15 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         selectRegion.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                when (position) {
-                    0 -> {
-                        index = 0
-                        url = linkNation
-                    }
-                    else -> {
-                        index = position - 1
-                        url = linkRegion
-                    }
+                if (position == 0) {
+                    index = 0
+                    url = LINK_NATION
+                } else {
+                    index = position - 1
+                    url = LINK_REGION
                 }
                 updateView()
             }

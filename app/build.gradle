@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+apply from: '../scripts/detekt_setup.gradle'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
