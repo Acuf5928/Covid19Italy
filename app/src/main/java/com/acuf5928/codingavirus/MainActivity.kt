@@ -2,10 +2,13 @@ package com.acuf5928.codingavirus
 
 import android.os.Bundle
 import android.view.View
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import org.json.JSONObject
 
 const val LINK_NATION = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
@@ -27,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var totaleText: TextView
     private lateinit var tamponiText: TextView
     private lateinit var selectRegion: Spinner
+    private lateinit var allData: ConstraintLayout
+    private lateinit var notConneted: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +54,8 @@ class MainActivity : AppCompatActivity() {
         totaleText = findViewById(R.id.totaleCasi)
         tamponiText = findViewById(R.id.tamponi)
         selectRegion = findViewById(R.id.spinner)
+        allData = findViewById(R.id.allData)
+        notConneted = findViewById(R.id.notConnected)
 
         selectRegion.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
@@ -72,6 +79,9 @@ class MainActivity : AppCompatActivity() {
         MyJsonParser().start(url, object : MyJsonParser.Result {
             override fun onComplete(json: MutableList<JSONObject>) {
                 runOnUiThread {
+                    notConneted.visibility = INVISIBLE
+                    allData.visibility = VISIBLE
+
                     dataText.text = json[index].getString("data")
                     sintomiText.text = json[index].getString("ricoverati_con_sintomi")
                     intensivaText.text = json[index].getString("terapia_intensiva")
@@ -88,7 +98,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onError(e: Exception) {
                 runOnUiThread {
-                    findViewById<TextView>(R.id.data).text = getString(R.string.not_connected)
+                    notConneted.visibility = VISIBLE
+                    allData.visibility = INVISIBLE
                 }
             }
         })
