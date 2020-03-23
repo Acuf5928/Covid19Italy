@@ -37,17 +37,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setView() {
-        dataText = findViewById(R.id.text)
-        sintomiText = findViewById(R.id.text4)
-        intensivaText = findViewById(R.id.text5)
-        ospedaliText = findViewById(R.id.text6)
-        isolamentoText = findViewById(R.id.text7)
-        totalePositiviText = findViewById(R.id.text8)
-        nuoviPositiviText = findViewById(R.id.text9)
-        dimessiText = findViewById(R.id.text10)
-        decedutiText = findViewById(R.id.text11)
-        totaleText = findViewById(R.id.text12)
-        tamponiText = findViewById(R.id.text13)
+        dataText = findViewById(R.id.data)
+        sintomiText = findViewById(R.id.sintomi)
+        intensivaText = findViewById(R.id.intensiva)
+        ospedaliText = findViewById(R.id.ospedali)
+        isolamentoText = findViewById(R.id.isolamento)
+        totalePositiviText = findViewById(R.id.totalePositivi)
+        nuoviPositiviText = findViewById(R.id.nuoviPositivi)
+        dimessiText = findViewById(R.id.dimessi)
+        decedutiText = findViewById(R.id.deceduti)
+        totaleText = findViewById(R.id.totaleCasi)
+        tamponiText = findViewById(R.id.tamponi)
         selectRegion = findViewById(R.id.spinner)
 
         selectRegion.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -91,10 +91,9 @@ class MainActivity : AppCompatActivity() {
 
             override fun onError(e: Exception) {
                 runOnUiThread {
-                    findViewById<TextView>(R.id.text).text = "NON CONNESSO"
+                    findViewById<TextView>(R.id.data).text = "NON CONNESSO"
                 }
             }
-
         })
     }
 }
