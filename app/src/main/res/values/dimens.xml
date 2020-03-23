@@ -3,5 +3,5 @@
     <dimen name="marginStart">8dp</dimen>
     <dimen name="marginEnd">8dp</dimen>
     <dimen name="marginTop">8dp</dimen>
-    <dimen name="marginTopSpinner">24dp</dimen>
+    <dimen name="marginBottonSpinner">12dp</dimen>
 </resources>

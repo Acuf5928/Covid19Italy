@@ -13,8 +13,9 @@
     <string name="totale_casi">Totale casi</string>
     <string name="tamponi">Tamponi</string>
     <string name="not_connected">NON CONNESSO</string>
+    <string name="seleziona_la_regione">Seleziona la regione:</string>
     <string-array name="regioni">
-        <item>Italia</item>
+        <item>Totale per l\'Italia</item>
         <item>Abruzzo</item>
         <item>Basilicata</item>
         <item>P.A. Bolzano</item>
