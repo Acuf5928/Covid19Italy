@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">CodingAVirus</string>
+    <string name="statistiche_covid_19">Statistiche COVID-19</string>
+    <string name="ultimo_aggiornamento">Ultimo aggiornamento</string>
+    <string name="ricoverati_con_sintomi">Ricoverati con sintomi</string>
+    <string name="terapia_intensiva">Terapia intensiva</string>
+    <string name="totale_ospedalizzati">Totale ospedalizzati</string>
+    <string name="isolamento_domiciliare">Isolamento domiciliare</string>
+    <string name="totale_attualmente_positivi">Totale attualmente positivi</string>
+    <string name="nuovi_attualmente_positivi">Nuovi attualmente positivi</string>
+    <string name="dimessi_guariti">Dimessi guariti</string>
+    <string name="deceduti">Deceduti</string>
+    <string name="totale_casi">Totale casi</string>
+    <string name="tamponi">Tamponi</string>
     <string-array name="regioni">
         <item>Italia</item>
         <item>Abruzzo</item>
