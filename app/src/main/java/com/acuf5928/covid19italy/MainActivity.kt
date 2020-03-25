@@ -1,4 +1,4 @@
-package com.acuf5928.codingavirus
+package com.acuf5928.covid19italy
 
 import android.os.Bundle
 import android.view.View

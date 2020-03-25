@@ -1,2 +1,2 @@
-rootProject.name='CodingAVirus'
+rootProject.name='covid19italy'
 include ':app'

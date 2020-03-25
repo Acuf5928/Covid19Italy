@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CodingAVirus</string>
+    <string name="app_name">Covid19Italy</string>
     <string name="statistiche_covid_19">Statistiche COVID-19</string>
     <string name="ultimo_aggiornamento">Ultimo aggiornamento</string>
     <string name="ricoverati_con_sintomi">Ricoverati con sintomi</string>
